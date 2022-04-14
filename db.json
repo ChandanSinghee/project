@@ -1,0 +1,26 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Admin",
+      "email": "admin@gmail.com",
+      "contact": 867214782178
+    },
+    {
+      "name": "throughNode",
+      "email": "admin2@gmail.com",
+      "contact": 12345678,
+      "id": 2
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

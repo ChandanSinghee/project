@@ -1,0 +1,22 @@
+table,
+th,
+td {
+    border: 1px solid black;
+    background-color: pink;
+    
+}
+
+.proj {
+    background-color: rgb(164, 248, 248);
+    
+}
+button{
+    color:blue;
+    
+}
+.edit{
+    background-color: rgb(25, 248, 25);
+}
+.delete{
+    background-color: red;
+}

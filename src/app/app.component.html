@@ -1,0 +1,46 @@
+<div class="proj">
+  <p *ngIf="dataSaved" ngClass="Success">Record Saved</p>
+  <form [formGroup]="bookForm" (ngSubmit)="onFormSubmit()">
+    <table>
+      <tr>
+        <td>name</td>
+        <td> <input formControlName="name"></td>
+      </tr>
+      <tr>
+        <td>email</td>
+        <td> <input formControlName="email"></td>
+      </tr>
+      <tr>
+        <td>contact</td>
+        <td> <input formControlName="contact"></td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button [disabled]="bookForm.invalid">Submit</button>
+
+      </tr>
+    </table>
+  </form>
+  <h3>view</h3>
+  <table class="border">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>email</th>
+      <th>contact</th>
+      
+      <th>Action</th>
+    </tr>
+    <tr *ngFor="let bk of allBooks | async">
+      <td>{{bk.id}}</td>
+      <td>{{bk.name }}</td>
+      <td>{{bk.email}}</td>
+      <td>{{bk.contact}}</td>
+      
+      <td>
+        <button class="edit" type="button" (click)="booktoEdit(bk.id)">Edit</button>
+        <button class="delete" type="button" (click)="booktoDelete(bk.id)">Delete</button>
+      </td>
+    </tr>
+  </table>
+</div>
